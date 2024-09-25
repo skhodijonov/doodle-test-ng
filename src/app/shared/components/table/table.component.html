@@ -1,0 +1,42 @@
+<table>
+  <thead>
+  <tr>
+    <th [attr.colspan]="config.columns.length || 1">
+      <input [formControl]="searchForm" type="text" placeholder="Search...">
+      <button (click)="onAddNewItemClick()">ADD NEW</button>
+    </th>
+  </tr>
+  <tr>
+    @for (column of config.columns; track column) {
+      <th class="sortable"
+          (click)="onSort(column)">
+        {{ column.header }}
+        @if (column.sortable && sortColumn === column.key) {
+          {{ sortDirection === 'asc' ? '▲' : '▼' }}
+        }
+      </th>
+    }
+  </tr>
+  </thead>
+  <tbody>
+    @if (displayedData.length) {
+      @for (item of displayedData; track item; let i = $index) {
+        <tr [routerLink]="['/details', i]">
+          @for (column of config.columns; track column) {
+            <td>{{ item[column.key] }}</td>
+          }
+        </tr>
+      }
+    } @else {
+      <tr>
+        <td [attr.colspan]="config.columns.length || 1">No Data</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<div class="pagination">
+  <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+</div>
