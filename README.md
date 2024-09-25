@@ -31,15 +31,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 1. Создание универсального компонента таблицы
    * Задача: Реализуйте компонент таблицы, который принимает данные и параметры конфигурации через входные свойства. Компонент должен поддерживать сортировку, фильтрацию и пагинацию.
+   * https://github.com/skhodijonov/doodle-test-ng/tree/master/src/app/shared/components/table
 
 2. Реализация маршрутизации с параметрами
    * Задача: Создайте приложение с несколькими маршрутами. Реализуйте маршрутизацию с параметрами и динамическими данными. Обработайте сценарий, когда пользователь вводит недопустимый маршрут.
+   * https://github.com/skhodijonov/doodle-test-ng/blob/master/src/app/app.routes.ts
 
 3. Создание формы с отложенной валидацией
    * Задача: Реализуйте форму, где валидация выполняется не сразу, а после определенного времени (например, 500 мс) после последнего изменения в поле ввода. Используйте debounceTime для оптимизации.
+   * https://github.com/skhodijonov/doodle-test-ng/blob/master/src/app/views/add-user/add-user.component.ts
 
 4. Создание кастомного директивы
    * Задача: Напишите кастомную директиву, которая изменяет стиль элемента на основе его состояния (например, меняет цвет фона на зеленый, если текст имеет определенное значение).
+   * https://github.com/skhodijonov/doodle-test-ng/blob/master/src/app/shared/directives/highlight.directive.ts
 
 5. Создание локального хранилища
    * Задача: Реализуйте функциональность, которая сохраняет данные в локальном хранилище (localStorage) браузера. Данные должны сохраняться между сессиями, и пользователь должен иметь возможность их редактировать.
+   * https://github.com/skhodijonov/doodle-test-ng/blob/master/src/app/core/services/data.service.ts
