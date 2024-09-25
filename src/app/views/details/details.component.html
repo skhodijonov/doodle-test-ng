@@ -1,1 +1,7 @@
-<p>details works!</p>
+<a routerLink="/">Go to Home</a>
+@if(detailsData){
+  <p>First Name: {{detailsData.firstName}}</p>
+  <p>Last Name: {{detailsData.lastName}}</p>
+  <p>Email: {{detailsData.email || '-'}}</p>
+  <p>Age: {{detailsData.age || '-'}}</p>
+}
