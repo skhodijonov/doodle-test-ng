@@ -1,3 +1,9 @@
+/**
+ * 1. Создание универсального компонента таблицы
+ * Задача: Реализуйте компонент таблицы, который принимает данные и параметры конфигурации через входные свойства.
+ * Компонент должен поддерживать сортировку, фильтрацию и пагинацию.
+ */
+
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {debounceTime, distinctUntilChanged, Subscription} from 'rxjs';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
