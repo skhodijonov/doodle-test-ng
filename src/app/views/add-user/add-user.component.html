@@ -20,6 +20,6 @@
     <label for="age">Age:</label>
     <input id="age" formControlName="age" type="number">
   </div>
-  <button type="submit">Add User</button>
+  <button type="submit" [appHighlight]="userForm.valid">Add User</button>
 </form>
 

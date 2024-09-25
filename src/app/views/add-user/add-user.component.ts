@@ -3,6 +3,7 @@ import {RouterLink} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {debounceTime, distinctUntilChanged, Subscription} from 'rxjs';
 import {cleanSub} from '../../core/helpers/subscription.helper';
+import {HighlightDirective} from '../../shared/directives/highlight.directive';
 
 @Component({
   selector: 'app-add-user',
@@ -10,6 +11,7 @@ import {cleanSub} from '../../core/helpers/subscription.helper';
   imports: [
     RouterLink,
     ReactiveFormsModule,
+    HighlightDirective,
   ],
   templateUrl: './add-user.component.html',
   styleUrl: './add-user.component.scss',
